@@ -19,12 +19,7 @@ tester.run("no-raw-value", rule, {
     invalid: [
         {
             code: `<p>NG</p>`,
-            errors: ["The literal should be wrapped by `t()` or `pt()`."],
-            parserOptions
-        },
-        {
-            code: "<p>`NG`</p>",
-            errors: ["The literal should be wrapped by `t()` or `pt()`."],
+            errors: [`"NG" should be wrapped by t() or pt().`],
             parserOptions
         }, {
             code: `
@@ -35,7 +30,7 @@ class DetailButton extends React.Component {
     </div>;
   }
 }`,
-            errors: ["The literal should be wrapped by `t()` or `pt()`."],
+            errors: [`"detail button" should be wrapped by t() or pt().`],
             parserOptions
         }
     ]

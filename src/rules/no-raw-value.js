@@ -3,7 +3,6 @@ const isStringLiteral = (node) => {
     return node.type === "Literal" && typeof node.value === "string";
 };
 module.exports = function(context) {
-    const message = "The literal should be wrapped by `t()` or `pt()`.";
     return {
         JSXElement(node){
             if (!node.children) {
@@ -15,6 +14,7 @@ module.exports = function(context) {
                 if (!value || value.length === 0) {
                     return;
                 }
+                const message = `"${value}" should be wrapped by t() or pt().`;
                 context.report({node: literal, message: message});
             });
         }

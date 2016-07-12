@@ -4,6 +4,6 @@ module.exports = {
         "no-raw-value": require("./rules/no-raw-value")
     },
     rulesConfig: {
-        "no-raw-value": 2
+        "simple-i18n-text/no-raw-value": "on"
     }
 };

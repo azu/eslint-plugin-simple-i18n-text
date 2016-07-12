@@ -28,7 +28,10 @@ Add "simple-i18n-text" to your `.eslintrc`
 {
   "plugins": [
     "simple-i18n-text"
-  ]
+  ],
+  "rules":{
+    "simple-i18n-text/no-raw-value": 2
+  }
 }
 ```
 
