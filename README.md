@@ -30,7 +30,7 @@ Add "simple-i18n-text" to your `.eslintrc`
     "simple-i18n-text"
   ],
   "rules":{
-    "simple-i18n-text/no-raw-value": 2
+    "simple-i18n-text/require-translation-ja": 
   }
 }
 ```
@@ -49,6 +49,29 @@ Disallow to string literal in JSXElement.
 
 **OK**:
 ```Jsx
+<p>{"OK"}</p>
+<p>{t("OK")}</p>
+<p>{pt("OK")}</p>
+```
+
+### [src/rules/require-translation-ja.js](src/rules/require-translation-ja.js)
+
+日本語のみを対象にした `no-raw-value` のルール。
+
+Check raw string literal in JSXElement, but allow non-japanese characters.
+
+**NG**:
+```jsx
+// NG
+<p>日本語はダメ</p>
+```
+
+**OK**:
+```Jsx
+<p>OK</p>
+<p>123</p>
+<p>!?</p>
+<p>▼</p>
 <p>{"OK"}</p>
 <p>{t("OK")}</p>
 <p>{pt("OK")}</p>
