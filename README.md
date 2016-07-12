@@ -1,4 +1,4 @@
-# eslint-plugin-simple-i18n-text
+# eslint-plugin-simple-i18n-text [![Build Status](https://travis-ci.org/azu/eslint-plugin-simple-i18n-text.svg?branch=master)](https://travis-ci.org/azu/eslint-plugin-simple-i18n-text)
 
 ESLint plugin for [simple-i18n-text](https://github.com/shatee/simple-i18n-text "simple-i18n-text").
 
