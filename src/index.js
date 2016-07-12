@@ -2,7 +2,7 @@
 module.exports = {
     rules: {
         "no-raw-value": require("./rules/no-raw-value"),
-        "require-translation-ja": require("./rules/require-translation-ja-ja")
+        "require-translation-ja": require("./rules/require-translation-ja")
     },
     rulesConfig: {
         "simple-i18n-text/no-raw-value": "on",
