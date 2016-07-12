@@ -22,9 +22,19 @@ tester.run("no-raw-value", rule, {
             errors: ["The literal should be wrapped by `t()` or `pt()`."],
             parserOptions
         },
-
         {
             code: "<p>`NG`</p>",
+            errors: ["The literal should be wrapped by `t()` or `pt()`."],
+            parserOptions
+        }, {
+            code: `
+class DetailButton extends React.Component {
+  render() {
+    return <div className="DetailButton">
+      <button>detail button</button>
+    </div>;
+  }
+}`,
             errors: ["The literal should be wrapped by `t()` or `pt()`."],
             parserOptions
         }

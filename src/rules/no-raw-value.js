@@ -11,8 +11,8 @@ module.exports = function(context) {
             }
             const children = node.children;
             children.filter(isStringLiteral).forEach(literal => {
-                const value = literal.value;
-                if (!value) {
+                const value = literal.value.trim();
+                if (!value || value.length === 0) {
                     return;
                 }
                 context.report({node: literal, message: message});
