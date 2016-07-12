@@ -4,6 +4,6 @@ module.exports = {
         "no-raw-value": require("./rules/no-raw-value")
     },
     rulesConfig: {
-        "states": 2
+        "no-raw-value": 2
     }
 };
