@@ -24,7 +24,13 @@ tester.run("require-translation-ja", rule, {
             code: `<p>日本語</p>`,
             errors: [`"日本語"を t() または pt() で囲んでください。`],
             parserOptions
-        }, {
+        },
+        {
+            code: `<a title="日本語">ng</a>`,
+            errors: [`"日本語"を t() または pt() で囲んでください。`],
+            parserOptions
+        },
+        {
             code: `
 class DetailButton extends React.Component {
   render() {
